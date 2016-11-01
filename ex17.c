@@ -11,6 +11,39 @@ typedef struct st_pilha
     struct st_pilha *prox;
 } pilha;
 
+void push(pilha **cabeca, char c);
+float pop(pilha **cabeca);
+
+int main(void)
+{
+
+    char str[MAX];
+    pilha *head=NULL;
+    int ent=1,saida=0,s='+';
+
+    printf("Escreva a funcao  na forma polonesa:\n %d",);
+                                        
+    while(ent!= 0)
+    {
+        scanf("%d",&ent);
+        push(&head,ent);
+
+    }
+    while(head != NULL)
+    {
+        saida= pop(&head);
+        printf("saida %d",saida);
+    }
+    return EXIT_SUCCESS;
+}
+int operaçao(int n1,int operador,int n2)
+{
+    resultado  
+  
+}
+
+
+
 void push(pilha **cabeca, char c)
 {
     pilha *pp=*cabeca;
