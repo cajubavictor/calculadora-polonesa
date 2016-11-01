@@ -29,4 +29,16 @@ void push(pilha **cabeca, char c)
     }
     return;
 }
+float pop(pilha **cabeca)
+{ 
+    char car='0';
+    pilha *primeiro=*cabeca;
+
+    *cabeca=primeiro->prox;
+    car=primeiro->car;
+    free(primeiro);
+    return car;
+}
+
+
 
