@@ -24,6 +24,19 @@ int main(void)
         if(ent != '\n' && ent != 'a')
         {
             if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
+                if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
+                {
+                    push(&head2,ent);
+                    n2=pop(&head);
+                    n1=pop(&head);
+                    result = operacao(n1-'0',ent,n2-'0');
+                    push(&head2,result);
+                    printf("resuuuuuuuuuuuuuult  %d ",result);
+
+                }
+                else
+                    push(&head,ent);
         }
+    }
     return 0;
 }
