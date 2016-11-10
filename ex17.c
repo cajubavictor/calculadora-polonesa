@@ -41,7 +41,16 @@ int main(void)
     return 0;
 }
 
+int  pop(pilha **cabeca)
+{ 
+    int  car=0;
+    pilha *primeiro=*cabeca;
 
+    *cabeca=primeiro->prox;
+    car=primeiro->car;
+    free(primeiro);
+    return car;
+}
 
 int  tamanho(pilha *cabeca)
 {
