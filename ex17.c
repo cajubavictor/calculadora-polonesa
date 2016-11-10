@@ -10,6 +10,10 @@ typedef struct st_pilha
     char  car;
     struct st_pilha *prox;
 } pilha;
+void push(pilha **cabeca, int  c);
+int   pop(pilha **cabeca);
+int  operacao(int  n1,int   operador,int n2);
+int  tamanho(pilha *cabeca);
 int main(void)
 {
 
