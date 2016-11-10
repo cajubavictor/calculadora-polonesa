@@ -44,6 +44,11 @@ int main(void)
     }
     return 0;
 }
+int  operacao(int  n1,int operador,int n2)
+{
+
+    return resultado;
+}
 
 void push(pilha **cabeca,int  c)
 {
