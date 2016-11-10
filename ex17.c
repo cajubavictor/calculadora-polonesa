@@ -10,3 +10,8 @@ typedef struct st_pilha
     char  car;
     struct st_pilha *prox;
 } pilha;
+int main(void)
+{
+
+    return 0;
+}
