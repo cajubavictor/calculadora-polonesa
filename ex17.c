@@ -41,6 +41,25 @@ int main(void)
     return 0;
 }
 
+void push(pilha **cabeca,int  c)
+{
+    pilha *pp=*cabeca;
+    pp=malloc(sizeof(pilha));
+    pp->car=c;
+    pp->prox=NULL;
+    if(cabeca == NULL)
+    {
+        pp->prox=NULL;
+        *cabeca=pp;
+    }
+    else
+    {        
+        pp->prox=*cabeca;
+        *cabeca=pp;
+    }
+    return;
+}
+
 int  pop(pilha **cabeca)
 { 
     int  car=0;
