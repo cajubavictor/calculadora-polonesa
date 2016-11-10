@@ -40,3 +40,20 @@ int main(void)
     }
     return 0;
 }
+
+
+
+int  tamanho(pilha *cabeca)
+{
+    pilha  *point= cabeca;
+    int i='0';
+
+    while(point != NULL )
+    {
+        i++;
+        point= point->prox;   
+    }
+
+
+    return i ;
+}
