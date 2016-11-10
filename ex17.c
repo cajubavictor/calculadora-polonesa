@@ -18,5 +18,12 @@ int main(void)
     char x,resultInt=0;
     char ent;
 
+    while(ent != 'a')
+    {
+        scanf("%c",&ent);
+        if(ent != '\n' && ent != 'a')
+        {
+            if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
+        }
     return 0;
 }
