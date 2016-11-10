@@ -46,6 +46,19 @@ int main(void)
 }
 int  operacao(int  n1,int operador,int n2)
 {
+    int   resultado ;
+    
+     printf("n1= %d \n n2 = %d\n",n1,n2);
+     if('+'== operador)
+     {
+         printf("aaaaaaaaaaaaaaaaa\n");
+         resultado = n1 + n2;
+     }
+     if('-' == operador)
+        resultado = n1 - n2;
+     if('x' == operador || '*'== operador)
+        resultado = n1 * n2;
+     if('/' == operador)
 
     return resultado;
 }
