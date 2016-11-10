@@ -13,5 +13,10 @@ typedef struct st_pilha
 int main(void)
 {
 
+    pilha *head=NULL, *head2=NULL;
+    char   saida,n1,n2,sinal,result='0';
+    char x,resultInt=0;
+    char ent;
+
     return 0;
 }
