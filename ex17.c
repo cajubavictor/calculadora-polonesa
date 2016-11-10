@@ -10,10 +10,10 @@ typedef struct st_pilha
     char  car;
     struct st_pilha *prox;
 } pilha;
-void push(pilha **cabeca, int  c);
-int   pop(pilha **cabeca);
-int  operacao(int  n1,int   operador,int n2);
-int  tamanho(pilha *cabeca);
+void push(pilha **cabeca, char  c);
+char   pop(pilha **cabeca);
+char  operacao(char   n1,char   operador,char n2);
+char  tamanho(pilha *cabeca);
 int main(void)
 {
 
@@ -28,42 +28,43 @@ int main(void)
         if(ent != '\n' && ent != 'a')
         {
             if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
-                if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
-                {
-                    push(&head2,ent);
-                    n2=pop(&head);
-                    n1=pop(&head);
-                    result = operacao(n1-'0',ent,n2-'0');
-                    push(&head2,result);
-                    printf("resuuuuuuuuuuuuuult  %d ",result);
+            {
+                push(&head2,ent);
+                n2=pop(&head);
+                n1=pop(&head);
+                result = operacao(n1-'0',ent,n2-'0');
+                push(&head2,result);
+                printf("resuuuuuuuuuuuuuult  %d ",result);
 
-                }
-                else
-                    push(&head,ent);
+            }
+            else
+                push(&head,ent);
         }
     }
     return 0;
 }
-int  operacao(int  n1,int operador,int n2)
+char operacao(char   n1,char operador,char n2)
 {
-    int   resultado ;
-    
-     printf("n1= %d \n n2 = %d\n",n1,n2);
-     if('+'== operador)
-     {
-         printf("aaaaaaaaaaaaaaaaa\n");
-         resultado = n1 + n2;
-     }
-     if('-' == operador)
+    char    resultado ;
+
+    printf("n1= %d \n n2 = %d\n",n1,n2);
+    if('+'== operador)
+    {
+        printf("aaaaaaaaaaaaaaaaa\n");
+        resultado = n1 + n2;
+    }
+    if('-' == operador)
         resultado = n1 - n2;
-     if('x' == operador || '*'== operador)
+    if('x' == operador || '*'== operador)
         resultado = n1 * n2;
-     if('/' == operador)
+    if('/' == operador)
+        resultado = n1 /n2;
+
 
     return resultado;
 }
 
-void push(pilha **cabeca,int  c)
+void push(pilha **cabeca,char  c)
 {
     pilha *pp=*cabeca;
     pp=malloc(sizeof(pilha));
@@ -82,9 +83,9 @@ void push(pilha **cabeca,int  c)
     return;
 }
 
-int  pop(pilha **cabeca)
+char pop(pilha **cabeca)
 { 
-    int  car=0;
+    char  car=0;
     pilha *primeiro=*cabeca;
 
     *cabeca=primeiro->prox;
@@ -93,10 +94,10 @@ int  pop(pilha **cabeca)
     return car;
 }
 
-int  tamanho(pilha *cabeca)
+char  tamanho(pilha *cabeca)
 {
     pilha  *point= cabeca;
-    int i='0';
+    char i='0';
 
     while(point != NULL )
     {
