@@ -21,9 +21,11 @@ int main(void)
     char n1,n2,sinal,result='0';
     char ent;
     int x;
+    int flag;
     printf("Digite a equacao na forma polonesa.: ");
     while((ent =getchar())!='\n' )
-    {
+    {   
+        flag++;
         if( ent == '+' || ent == '-' || ent  == 'x'|| ent  == '/')
         {
             n2=pop(&head);
@@ -35,6 +37,11 @@ int main(void)
 
         else
             push(&head,ent);
+    }
+    if(flag==0)
+    {
+        printf("não foi recebido dados\n");
+        return 0;
     }
     x=tamanho(head);  
     result=pop(&head);
