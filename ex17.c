@@ -20,7 +20,7 @@ int main(void)
     pilha *head=NULL, *head2=NULL;
     char n1,n2,sinal,result='0';
     char ent;
-
+    int x;
     printf("Digite a equacao na forma polonesa.: ");
     while((ent =getchar())!='\n' )
     {
@@ -32,11 +32,17 @@ int main(void)
             push(&head,result+'0');
 
         }
+
         else
             push(&head,ent);
     }
+    x=tamanho(head);  
     result=pop(&head);
-    printf("Resultado %d\n",result - '0');
+        if(x =='1')
+            printf("Resultado %d\n",result - '0');
+        else
+            printf("dados insulficientes para calcular\n");
+    
     return 0;
 }
 char operacao(char   n1,char operador,char n2)
