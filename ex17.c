@@ -17,8 +17,8 @@ char  tamanho(pilha *cabeca);
 int main(void)
 {
 
-    pilha *head=NULL, *head2=NULL;
-    char n1,n2,sinal,result='0';
+    pilha *head=NULL;
+    char n1,n2,result='0';
     char ent;
     int x;
     int flag;
